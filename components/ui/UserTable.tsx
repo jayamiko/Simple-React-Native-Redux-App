@@ -1,7 +1,7 @@
 import { HomeNavigationProps } from "@/app/type/navigation";
 import { User } from "@/app/type/user";
 import React from "react";
-import { ScrollView, Text } from "react-native";
+import { ScrollView } from "react-native";
 import { DataTable } from "react-native-paper";
 
 type Props = {
@@ -27,7 +27,7 @@ function UserTable({ data, navigation }: Props) {
                 key={i}
                 style={key === "id" ? { width: 20 } : { width: 120 }}
               >
-                <Text style={{ textAlign: "left" }}>{key}</Text>
+                {key}
               </DataTable.Title>
             );
           })}

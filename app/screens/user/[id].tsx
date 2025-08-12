@@ -12,8 +12,6 @@ function UserDetail() {
 
   const { id } = route.params;
 
-  console.log("ID: ", id);
-
   const dispatch = useAppDispatch();
   const { data, loading, error } = useAppSelector((state) => state.userDetail);
 
@@ -22,7 +20,6 @@ function UserDetail() {
       dispatch(fetchUserDetail(id));
     }
   }, [dispatch, id]);
-  console.log("Data Detail: ", data);
 
   if (loading) return <LoadingData />;
   if (error && !loading) return <ErrorData error={error} />;
